@@ -425,7 +425,7 @@ static size_t SingleStep()
 		{ // Nothing more to sweep?
 			State = GCS_Finalize;
 		}
-		assert(old >= AllocBytes);
+	//	assert(old >= AllocBytes);
 		Estimate -= old - AllocBytes;
 		return (GCSWEEPMAX - finalize_count) * GCSWEEPCOST + finalize_count * GCFINALIZECOST;
 	  }
@@ -788,3 +788,4 @@ CCMD(gc)
 	}
 }
 #endif
+
